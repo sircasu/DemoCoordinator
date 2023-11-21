@@ -1,22 +1,22 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  DemoCoordinator
 //
-//  Created by Matteo Casu on 17/11/23.
+//  Created by Matteo Casu on 21/11/23.
 //
 
-
+import Foundation
 import UIKit
 
-
-class ViewController: UIViewController, Coordinating {
-        
+class SecondViewController: UIViewController, Coordinating {
+    
     var coordinator: Coordinator?
     
+    
     override func viewDidLoad() {
-        title = "Home"
+        super.viewDidLoad()
+        title = "Second"
         
-
         let button = createButton()
         
         view.addSubview(button)
@@ -24,7 +24,7 @@ class ViewController: UIViewController, Coordinating {
     
     
     @objc func didTapButton() {
-        coordinator?.eventOccurred(with: .buttonTapped)
+//        coordinator?.eventOccurred(with: .buttonTapped)
     }
     
 
@@ -34,7 +34,7 @@ class ViewController: UIViewController, Coordinating {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 220, height: 55))
         button.center = view.center
         button.backgroundColor = .systemGreen
-        button.setTitle("Go to second VC", for: .normal)
+        button.setTitle("Go to?", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         
