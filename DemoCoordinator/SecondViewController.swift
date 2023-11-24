@@ -8,9 +8,8 @@
 import Foundation
 import UIKit
 
-class SecondViewController: UIViewController, Coordinating {
+class SecondViewController: UIViewController {
     
-    var coordinator: Coordinator?
     
     
     override func viewDidLoad() {
@@ -24,7 +23,6 @@ class SecondViewController: UIViewController, Coordinating {
     
     
     @objc func didTapButton() {
-//        coordinator?.eventOccurred(with: .buttonTapped)
     }
     
 
